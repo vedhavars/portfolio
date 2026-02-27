@@ -5,69 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vedhavarshini J | Automotive Software Verification Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-body {background:#0B0F19; color:#e6e6e6; line-height:1.6;}
-a {text-decoration:none; color:#6ea0ff; transition:.3s;}
-a:hover {color:#ff9a9e;}
-
-header {
-  background:linear-gradient(135deg, #1e293b, #0f172a);
-  color:#fff; text-align:center; padding:80px 20px;
-}
-header h1 {font-size:2.8em; font-weight:600;}
-header p {font-size:1.2em; opacity:0.9; margin-top:10px;}
-
-section {padding:70px 20px;}
-h2 {text-align:center; font-size:2em; margin-bottom:30px;}
-.container {max-width:1100px; margin:auto;}
-
-#about p {text-align:center; max-width:750px; margin:10px auto;}
-
-#projects .project {
-  background:#111827; padding:25px; border-radius:12px;
-  margin-bottom:20px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-#skills ul {
-  list-style:none; 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:12px; 
+body{
+  background:#050816;
+  color:#e6f1ff;
+  line-height:1.6;
+}
+
+/* Neon accent color */
+:root{
+  --neon:#00f5ff;
+  --darkblue:#0b1120;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:110px 20px;
+  background:linear-gradient(180deg,#0b1120,#050816);
+}
+
+header h1{
+  font-size:3em;
+  color:white;
+}
+
+header h1 span{
+  color:var(--neon);
+  text-shadow:0 0 15px var(--neon);
+}
+
+header p{
+  margin-top:15px;
+  font-size:1.2em;
+  color:#9fb3c8;
+}
+
+/* Section */
+section{
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2.2em;
+  color:var(--neon);
+  text-shadow:0 0 10px var(--neon);
+}
+
+/* Glass card */
+.card{
+  background:rgba(15,23,42,0.6);
+  backdrop-filter:blur(12px);
+  padding:30px;
+  border-radius:15px;
+  border:1px solid rgba(0,245,255,0.2);
+  margin-bottom:30px;
+  transition:0.4s;
+}
+
+.card:hover{
+  border:1px solid var(--neon);
+  box-shadow:0 0 25px rgba(0,245,255,0.6);
+  transform:translateY(-5px);
+}
+
+.project-title{
+  font-size:1.3em;
+  font-weight:600;
+  color:var(--neon);
+  margin-bottom:10px;
+}
+
+/* Skills */
+#skills ul{
+  display:flex;
+  flex-wrap:wrap;
   justify-content:center;
-}
-#skills li {
-  background:#1f2937; 
-  padding:10px 18px; 
-  border-radius:20px;
-  font-size:0.9em;
+  gap:15px;
+  list-style:none;
 }
 
-#experience .exp-card {
-  background:#111827; 
-  padding:25px; 
-  border-radius:12px;
-  margin-bottom:20px;
+#skills li{
+  padding:10px 18px;
+  border-radius:25px;
+  border:1px solid var(--neon);
+  color:var(--neon);
+  transition:0.3s;
 }
 
-#contact p {text-align:center; margin-bottom:10px;}
+#skills li:hover{
+  background:var(--neon);
+  color:#050816;
+  box-shadow:0 0 15px var(--neon);
+}
 
-.button {
+/* Button */
+.button{
   display:inline-block;
   margin-top:20px;
-  padding:10px 20px;
-  background:#2563eb;
-  color:#fff;
-  border-radius:5px;
+  padding:12px 25px;
+  border-radius:30px;
+  border:1px solid var(--neon);
+  color:var(--neon);
+  text-decoration:none;
+  transition:0.3s;
 }
 
-footer {
-  text-align:center; 
-  padding:20px; 
-  background:#111827; 
-  margin-top:40px;
+.button:hover{
+  background:var(--neon);
+  color:#050816;
+  box-shadow:0 0 20px var(--neon);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#0b1120;
+  color:#9fb3c8;
 }
 </style>
 </head>
@@ -75,23 +146,25 @@ footer {
 <body>
 
 <header>
-  <h1>Vedhavarshini J</h1>
-  <p>Automotive Software Verification Engineer</p>
-  <p>ISO 26262 | C-Based Validation | MC/DC Coverage</p>
+  <h1><span>Vedhavarshini J</span></h1>
+  <p>🚗 Automotive Software Verification Engineer</p>
+  <p>ISO 26262 | MC/DC Coverage | Embedded C Testing</p>
 </header>
 
 <section id="about">
   <div class="container">
     <h2>About Me</h2>
-    <p>
-      Automotive Software Verification Engineer with 3+ years of experience in safety-critical embedded systems.
-      Specialized in C-based unit and integration testing, white-box validation, and structural coverage analysis 
-      (Statement, Branch, MC/DC) within ISO 26262 ASIL-B environments.
-    </p>
-    <p>
-      Experienced in reverse engineering legacy code, CI-integrated validation workflows, 
-      and maintaining safety-focused documentation and requirement traceability.
-    </p>
+    <div class="card">
+      <p>
+        Automotive Software Verification Engineer with 3+ years of experience in safety-critical embedded systems.
+        Specialized in C-based unit and integration testing, white-box validation,
+        and structural coverage (Statement, Branch, MC/DC) within ISO 26262 ASIL-B environments.
+      </p>
+      <p style="margin-top:15px;">
+        Passionate about building reliable automotive software systems and ensuring
+        high-quality validation aligned with functional safety standards.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -99,19 +172,16 @@ footer {
   <div class="container">
     <h2>Project Experience</h2>
 
-    <div class="project">
-      <h3>GNSS Radar Safety Measurement Engine</h3>
+    <div class="card">
+      <div class="project-title">GNSS Radar Safety Measurement Engine</div>
       <p><strong>ISO 26262 ASIL-B Project</strong></p>
       <p>
-        Verified 16 interconnected embedded software components.
-        Designed and implemented C-based unit and integration tests using Cantata.
+        Verified 16 interconnected embedded components using Cantata.
+        Achieved 100% structural coverage (Statement, Branch, MC/DC) for 12 modules.
       </p>
       <p>
-        Achieved 100% structural coverage (Statement, Branch, MC/DC) for 12 components.
-        Performed white-box analysis of internal decision logic and integrated automated test suites into CI pipeline.
-      </p>
-      <p>
-        Maintained requirement-to-test traceability in System Weaver and documented safety deviations as per ISO 26262 guidelines.
+        Integrated automated test suites into CI pipeline and maintained
+        requirement traceability using System Weaver.
       </p>
     </div>
 
@@ -129,14 +199,12 @@ footer {
       <li>Integration Testing</li>
       <li>White-Box Testing</li>
       <li>MC/DC Coverage</li>
-      <li>Statement & Branch Coverage</li>
-      <li>ISO 26262 (ASIL-B Exposure)</li>
+      <li>ISO 26262</li>
       <li>Cantata</li>
       <li>GitLab</li>
       <li>JIRA</li>
       <li>Trace32</li>
-      <li>System Weaver</li>
-      <li>CI Pipeline Validation</li>
+      <li>CI Pipeline</li>
     </ul>
   </div>
 </section>
@@ -145,23 +213,21 @@ footer {
   <div class="container">
     <h2>Professional Experience</h2>
 
-    <div class="exp-card">
-      <h3>Senior Engineer – Automotive Software Verification</h3>
+    <div class="card">
+      <div class="project-title">Senior Engineer – Automotive Software Verification</div>
       <p><strong>Tata Elxsi | Jul 2023 – Nov 2025</strong></p>
       <p>
-        Performed C-based unit and integration testing using Cantata within ISO 26262 ASIL-B environment.
-        Achieved structural coverage (Statement, Branch, MC/DC), maintained requirement traceability,
-        and supported CI-integrated validation workflows.
+        Performed C-based unit and integration testing within ISO 26262 ASIL-B environment.
+        Achieved structural coverage and supported CI validation workflows.
       </p>
     </div>
 
-    <div class="exp-card">
-      <h3>Engineer – Embedded Software & Validation</h3>
+    <div class="card">
+      <div class="project-title">Engineer – Embedded Software & Validation</div>
       <p><strong>Tata Elxsi | Jul 2022 – Jul 2023</strong></p>
       <p>
-        Supported development and validation of MISRA-compliant C modules.
-        Assisted in debugging using Trace32 and contributed to regression automation
-        and safety documentation activities.
+        Supported MISRA-compliant C development and debugging using Trace32.
+        Contributed to regression automation and safety documentation.
       </p>
     </div>
 
@@ -171,21 +237,20 @@ footer {
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <p>Email: vedhavarshini2001@gmail.com</p>
-    <p>Phone: 8825983496</p>
-    <p>
-      LinkedIn:
-      <a href="https://linkedin.com/in/vedhavarshini-j-2lju26/" target="_blank">
-        Click Here
-      </a>
-    </p>
-
-    <a href="#" class="button">Download Resume</a>
+    <div class="card" style="text-align:center;">
+      <p>Email: vedhavarshini2001@gmail.com</p>
+      <p>Phone: 8825983496</p>
+      <p>
+        <a href="https://linkedin.com/in/vedhavarshini-j-2lju26/" target="_blank" class="button">
+          LinkedIn Profile
+        </a>
+      </p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Vedhavarshini J — All rights reserved.</p>
+  <p>© 2025 Vedhavarshini J | Built with Passion for Automotive Engineering 🚗⚡</p>
 </footer>
 
 </body>
