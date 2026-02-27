@@ -8,6 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --primary:#00BFA6;
+  --accent:#00E5C4;
+  --bg:#F4FBFA;
+  --card:#FFFFFF;
+  --text:#1E293B;
+  --border:#D9F3EF;
+}
+
 *{
   margin:0;
   padding:0;
@@ -16,8 +25,8 @@
 }
 
 body{
-  background:#f6faff;
-  color:#1e293b;
+  background:var(--bg);
+  color:var(--text);
   overflow-x:hidden;
 }
 
@@ -29,17 +38,18 @@ body{
   top:0;
   left:0;
   z-index:-1;
-  background:linear-gradient(120deg,#eaf4ff,#ffffff);
+  background:linear-gradient(120deg,#E8FBF8,#FFFFFF);
 }
 
 header{
   text-align:center;
   padding:100px 20px;
+  background:linear-gradient(90deg,#E8FBF8,#FFFFFF);
 }
 
 header h1{
   font-size:3em;
-  color:#0066ff;
+  color:var(--primary);
 }
 
 header p{
@@ -59,21 +69,22 @@ section{
 h2{
   text-align:center;
   margin-bottom:50px;
-  color:#0066ff;
+  color:var(--primary);
 }
 
 .card{
-  background:white;
+  background:var(--card);
   padding:30px;
   border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  border:1px solid var(--border);
+  box-shadow:0 10px 25px rgba(0,191,166,0.08);
   margin-bottom:30px;
   transition:0.3s;
 }
 
 .card:hover{
   transform:translateY(-5px);
-  box-shadow:0 15px 40px rgba(0,102,255,0.2);
+  box-shadow:0 15px 35px rgba(0,191,166,0.18);
 }
 
 /* Circular gauge */
@@ -101,11 +112,11 @@ h2{
 }
 
 .gauge .bg{
-  stroke:#e2e8f0;
+  stroke:#E2F5F2;
 }
 
 .gauge .progress{
-  stroke:#0066ff;
+  stroke:var(--primary);
   stroke-dasharray:440;
   stroke-dashoffset:440;
   animation:fillGauge 2s forwards;
@@ -128,28 +139,29 @@ h2{
 .gauge-text span{
   font-weight:600;
   font-size:1.1em;
-  color:#0066ff;
+  color:var(--primary);
 }
 
 .button{
   display:inline-block;
   padding:12px 25px;
   border-radius:25px;
-  background:#0066ff;
+  background:var(--primary);
   color:white;
   text-decoration:none;
   transition:0.3s;
 }
 
 .button:hover{
-  background:#00aaff;
+  background:var(--accent);
 }
 
 footer{
   text-align:center;
   padding:30px;
-  background:#eaf4ff;
+  background:#E8FBF8;
   margin-top:40px;
+  color:var(--text);
 }
 </style>
 </head>
