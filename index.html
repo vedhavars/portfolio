@@ -3,188 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vedhavarshini J | Functional Safety | SDET Portfolio</title>
+<title>Vedhavarshini J | Automotive Software Verification Engineer</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  /* ===== Global Styles ===== */
-  * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-  body {background:#0B0F19; color:#e6e6e6; overflow-x:hidden; line-height:1.6;}
-  a {text-decoration:none; color:#6ea0ff; transition:.3s;}
-  a:hover {color:#ff9a9e;}
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body {background:#0B0F19; color:#e6e6e6; line-height:1.6;}
+a {text-decoration:none; color:#6ea0ff; transition:.3s;}
+a:hover {color:#ff9a9e;}
 
-  /* ===== Animations ===== */
-  .fade {animation: fadeIn 1.4s ease-in-out forwards; opacity:0;}
-  .slide-up{opacity:0; transform: translateY(40px); animation: slideUp 1s ease forwards;}
-  @keyframes fadeIn {to {opacity:1;}}
-  @keyframes slideUp {to {opacity:1; transform: translateY(0);} }
+header {
+  background:linear-gradient(135deg, #1e293b, #0f172a);
+  color:#fff; text-align:center; padding:80px 20px;
+}
+header h1 {font-size:2.8em; font-weight:600;}
+header p {font-size:1.2em; opacity:0.9; margin-top:10px;}
 
-  /* ===== Header ===== */
-  header {
-    background:linear-gradient(135deg, #ff9a9e, #c679e3, #6ea0ff);
-    color:#fff; text-align:center; padding:70px 20px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.4);
-  }
-  header h1 {font-size:3em; font-weight:600;}
-  header p {font-size:1.3em; opacity:0.95;}
+section {padding:70px 20px;}
+h2 {text-align:center; font-size:2em; margin-bottom:30px;}
+.container {max-width:1100px; margin:auto;}
 
-  /* ===== Sections ===== */
-  section {padding:70px 20px;}
-  h2 {text-align:center; font-size:2.2em; margin-bottom:30px; position:relative;}
-  h2::after{
-    content:""; width:60px; height:4px;
-    background:#6ea0ff; display:block; margin:10px auto 0;
-    border-radius:5px;
-  }
-  .container {max-width:1150px; margin:auto;}
+#about p {text-align:center; max-width:750px; margin:10px auto;}
 
-  /* ===== About Section ===== */
-  #about img{
-    width:160px; height:160px; border-radius:50%; object-fit:cover;
-    display:block; margin:20px auto;
-    box-shadow:0 4px 15px rgba(255,255,255,0.1);
-    transition: transform .4s;
-  }
-  #about img:hover{transform:scale(1.05);}
-  #about p{text-align:center; max-width:750px; margin:auto; font-size:1.1em; line-height:1.7;}
+#projects .project {
+  background:#111827; padding:25px; border-radius:12px;
+  margin-bottom:20px;
+}
 
-  /* ===== Projects Section ===== */
-  #projects .project{
-    background:#111827; padding:25px; border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.5);
-    transition:transform .4s ease, box-shadow .4s ease;
-    transform-style:preserve-3d;
-    position:relative;
-  }
-  #projects .project:hover{
-    transform:rotate3d(1,1,0,6deg);
-    box-shadow:0 15px 30px rgba(0,0,0,0.7);
-  }
-  #projects img{width:100%; border-radius:12px; margin-bottom:12px;}
-  #projects .projects-grid{display:grid; gap:25px; grid-template-columns:repeat(auto-fit, minmax(280px,1fr));}
+#skills ul {
+  list-style:none; 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:12px; 
+  justify-content:center;
+}
+#skills li {
+  background:#1f2937; 
+  padding:10px 18px; 
+  border-radius:20px;
+  font-size:0.9em;
+}
 
-  /* ===== Skills Section ===== */
-  #skills ul{list-style:none; display:flex; flex-wrap:wrap; gap:15px; justify-content:center;}
-  #skills li{
-    background:linear-gradient(135deg,#7f5af0,#6246ea);
-    color:#fff; padding:12px 20px; border-radius:30px;
-    font-size:0.95em; font-weight:500;
-    box-shadow:0 4px 15px rgba(0,0,0,0.4);
-    transition: transform .3s;
-  }
-  #skills li:hover{transform:scale(1.1);}
+#experience .exp-card {
+  background:#111827; 
+  padding:25px; 
+  border-radius:12px;
+  margin-bottom:20px;
+}
 
-  /* ===== Experience Cards ===== */
-  #experience .exp-card{
-    background:#111827; padding:25px; border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.5);
-    margin-bottom:25px; transition:.3s;
-  }
-  #experience .exp-card:hover{transform:translateY(-8px);}
+#contact p {text-align:center; margin-bottom:10px;}
 
-  /* ===== Contact Section ===== */
-  #contact p{text-align:center; font-size:1.1em; margin-bottom:8px;}
-  #contact a{
-    display:inline-block; margin:10px; padding:12px 25px;
-    background:#6ea0ff; color:#fff; border-radius:25px; font-weight:bold; transition:.3s;
-  }
-  #contact a:hover{background:#ff9a9e; transform:translateY(-5px);}
+.button {
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:5px;
+}
 
-  /* ===== Footer ===== */
-  footer{
-    text-align:center; padding:25px; background:#111827; color:#ddd;
-    margin-top:40px; font-size:0.9em;
-    box-shadow:0 -4px 12px rgba(0,0,0,0.4);
-  }
-
-  /* ===== Responsive ===== */
-  @media(max-width:768px){
-    #projects .projects-grid{grid-template-columns:1fr;}
-  }
+footer {
+  text-align:center; 
+  padding:20px; 
+  background:#111827; 
+  margin-top:40px;
+}
 </style>
 </head>
+
 <body>
 
-<!-- ===== Header ===== -->
-<header class="fade">
+<header>
   <h1>Vedhavarshini J</h1>
-  <p>Functional Safety | SDET Portfolio</p>
+  <p>Automotive Software Verification Engineer</p>
+  <p>ISO 26262 | C-Based Validation | MC/DC Coverage</p>
 </header>
 
-<!-- ===== About Section ===== -->
-<section id="about" class="slide-up">
+<section id="about">
   <div class="container">
     <h2>About Me</h2>
-    <img src="https://via.placeholder.com/160" alt="Profile Picture">
-    <p>I am Vedhavarshini, an experienced SDET with expertise in Functional Safety (ISO 26262), automation, and embedded software testing. Passionate about quality and safety-critical systems.</p>
+    <p>
+      Automotive Software Verification Engineer with 3+ years of experience in safety-critical embedded systems.
+      Specialized in C-based unit and integration testing, white-box validation, and structural coverage analysis 
+      (Statement, Branch, MC/DC) within ISO 26262 ASIL-B environments.
+    </p>
+    <p>
+      Experienced in reverse engineering legacy code, CI-integrated validation workflows, 
+      and maintaining safety-focused documentation and requirement traceability.
+    </p>
   </div>
 </section>
 
-<!-- ===== Projects Section ===== -->
-<section id="projects" class="slide-up">
+<section id="projects">
   <div class="container">
-    <h2>Highlighted Projects</h2>
-    <div class="projects-grid">
-      <div class="project fade">
-        <img src="https://via.placeholder.com/350x180">
-        <h3>Automated Regression Framework</h3>
-        <p>Python-based automation integrated with Cantata for unit & integration testing in C/C++. Reduced manual validation time by 50%.</p>
-      </div>
-      <div class="project fade">
-        <img src="https://via.placeholder.com/350x180">
-        <h3>ISO 26262 Safety Traceability</h3>
-        <p>Documented 100+ safety requirements with ASIL traceability. Created Part 4 compliance checklist improving review efficiency by 30%.</p>
-      </div>
-      <div class="project fade">
-        <img src="https://via.placeholder.com/350x180">
-        <h3>Embedded Debugging & Static Analysis</h3>
-        <p>Performed debugging using Trace32, static checks, GitLab integration, and CI validation.</p>
-      </div>
+    <h2>Project Experience</h2>
+
+    <div class="project">
+      <h3>GNSS Radar Safety Measurement Engine</h3>
+      <p><strong>ISO 26262 ASIL-B Project</strong></p>
+      <p>
+        Verified 16 interconnected embedded software components.
+        Designed and implemented C-based unit and integration tests using Cantata.
+      </p>
+      <p>
+        Achieved 100% structural coverage (Statement, Branch, MC/DC) for 12 components.
+        Performed white-box analysis of internal decision logic and integrated automated test suites into CI pipeline.
+      </p>
+      <p>
+        Maintained requirement-to-test traceability in System Weaver and documented safety deviations as per ISO 26262 guidelines.
+      </p>
     </div>
+
   </div>
 </section>
 
-<!-- ===== Skills Section ===== -->
-<section id="skills" class="slide-up">
+<section id="skills">
   <div class="container">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <ul>
-      <li>C</li><li>C++</li><li>Python</li><li>Shell Scripting</li>
-      <li>Unit Testing</li><li>Integration Testing</li><li>Functional Safety</li>
-      <li>GitLab</li><li>JIRA</li><li>Cantata</li><li>Trace32</li>
-      <li>System Weaver</li><li>Enterprise Architect</li>
+      <li>C</li>
+      <li>C++ (Basic)</li>
+      <li>Python (Basic)</li>
+      <li>Unit Testing</li>
+      <li>Integration Testing</li>
+      <li>White-Box Testing</li>
+      <li>MC/DC Coverage</li>
+      <li>Statement & Branch Coverage</li>
+      <li>ISO 26262 (ASIL-B Exposure)</li>
+      <li>Cantata</li>
+      <li>GitLab</li>
+      <li>JIRA</li>
+      <li>Trace32</li>
+      <li>System Weaver</li>
+      <li>CI Pipeline Validation</li>
     </ul>
   </div>
 </section>
 
-<!-- ===== Experience Section ===== -->
-<section id="experience" class="slide-up">
+<section id="experience">
   <div class="container">
     <h2>Professional Experience</h2>
-    <div class="exp-card fade">
-      <h3>Senior Engineer – SDET | Tata Elxsi (Jul 2023 – Nov 2025)</h3>
-      <p>Executed unit, integration, and functional testing using Cantata, automated Python workflows, prepared test plans, and delivered ASIL-B aligned artifacts.</p>
+
+    <div class="exp-card">
+      <h3>Senior Engineer – Automotive Software Verification</h3>
+      <p><strong>Tata Elxsi | Jul 2023 – Nov 2025</strong></p>
+      <p>
+        Performed C-based unit and integration testing using Cantata within ISO 26262 ASIL-B environment.
+        Achieved structural coverage (Statement, Branch, MC/DC), maintained requirement traceability,
+        and supported CI-integrated validation workflows.
+      </p>
     </div>
-    <div class="exp-card fade">
-      <h3>Engineer – Software Development & Test | Tata Elxsi (Jul 2022 – Jul 2023)</h3>
-      <p>Developed C & Verilog modules, maintained safety documentation, created ISO 26262 Part 4 compliance checklists, and improved review efficiency.</p>
+
+    <div class="exp-card">
+      <h3>Engineer – Embedded Software & Validation</h3>
+      <p><strong>Tata Elxsi | Jul 2022 – Jul 2023</strong></p>
+      <p>
+        Supported development and validation of MISRA-compliant C modules.
+        Assisted in debugging using Trace32 and contributed to regression automation
+        and safety documentation activities.
+      </p>
     </div>
+
   </div>
 </section>
 
-<!-- ===== Contact Section ===== -->
-<section id="contact" class="slide-up">
+<section id="contact">
   <div class="container">
-    <h2>Contact Me</h2>
-    <p>Email: <b>vedhavarshini2001@gmail.com</b></p>
-    <p>Phone: <b>8825983496</b></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/vedhavarshini-j-2lju26/" target="_blank">Click Here</a></p>
+    <h2>Contact</h2>
+    <p>Email: vedhavarshini2001@gmail.com</p>
+    <p>Phone: 8825983496</p>
+    <p>
+      LinkedIn:
+      <a href="https://linkedin.com/in/vedhavarshini-j-2lju26/" target="_blank">
+        Click Here
+      </a>
+    </p>
+
+    <a href="#" class="button">Download Resume</a>
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer>
   <p>© 2025 Vedhavarshini J — All rights reserved.</p>
 </footer>
