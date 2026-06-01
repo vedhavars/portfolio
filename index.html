@@ -9,12 +9,12 @@
 
 <style>
 :root{
-  --primary:#00BFA6;
-  --accent:#00E5C4;
-  --bg:#F4FBFA;
+  --primary:#7C3AED;
+  --accent:#14B8A6;
+  --bg:#F8FAFC;
   --card:#FFFFFF;
   --text:#1E293B;
-  --border:#D9F3EF;
+  --border:#E9D5FF;
 }
 
 *{
@@ -37,23 +37,34 @@ body{
   top:0;
   left:0;
   z-index:-1;
-  background:linear-gradient(120deg,#E8FBF8,#FFFFFF);
+  background:linear-gradient(
+    135deg,
+    #F8FAFC,
+    #F3E8FF,
+    #ECFDF5
+  );
 }
 
 header{
   text-align:center;
   padding:100px 20px;
-  background:linear-gradient(90deg,#E8FBF8,#FFFFFF);
+  background:linear-gradient(
+    135deg,
+    #7C3AED 0%,
+    #8B5CF6 50%,
+    #14B8A6 100%
+  );
+  color:white;
 }
 
 header h1{
   font-size:3em;
-  color:var(--primary);
+  color:white;
 }
-
+  
 header p{
-  margin-top:10px;
-  font-size:1.1em;
+  color:rgba(255,255,255,0.95);
+  font-weight:400;
 }
 
 section{
@@ -76,14 +87,14 @@ h2{
   padding:30px;
   border-radius:15px;
   border:1px solid var(--border);
-  box-shadow:0 10px 25px rgba(0,191,166,0.08);
+  box-shadow:0 10px 25px rgba(124,58,237,0.12);
   margin-bottom:30px;
   transition:0.3s;
 }
 
 .card:hover{
   transform:translateY(-5px);
-  box-shadow:0 15px 35px rgba(0,191,166,0.18);
+  box-shadow:0 15px 35px rgba(124,58,237,0.22);
 }
 
 .gauge-container{
@@ -110,11 +121,11 @@ h2{
 }
 
 .gauge .bg{
-  stroke:#E2F5F2;
+  stroke:#EDE9FE;
 }
 
 .gauge .progress{
-  stroke:var(--primary);
+  stroke:#7C3AED;
   stroke-dasharray:440;
   stroke-dashoffset:440;
   animation:fillGauge 2s forwards;
@@ -144,22 +155,26 @@ h2{
   display:inline-block;
   padding:12px 25px;
   border-radius:25px;
-  background:var(--primary);
+  background:#7C3AED;
   color:white;
   text-decoration:none;
   transition:0.3s;
 }
 
 .button:hover{
-  background:var(--accent);
+  background:#14B8A6;
 }
 
 footer{
   text-align:center;
   padding:30px;
-  background:#E8FBF8;
+  background:linear-gradient(
+    135deg,
+    #7C3AED,
+    #14B8A6
+  );
+  color:white;
   margin-top:40px;
-  color:var(--text);
 }
 </style>
 </head>
@@ -171,7 +186,7 @@ footer{
 <header>
   <h1>Vedhavarshini J</h1>
   <p>🚗 Automotive Software Verification Engineer</p>
-  <p>ISO 26262 | ISTQB® CTFL Certified | MC/DC Coverage | Embedded C Testing</p>
+  <p>ISTQB® CTFL Certified | ISO 26262 |MC/DC Coverage | Embedded C Testing</p>
 </header>
 
 <section>
@@ -268,6 +283,33 @@ footer{
 
 <section>
   <div class="container">
+    <h2>Tools & Technologies</h2>
+
+    <div class="card">
+      <strong>Software Verification & Functional Safety</strong><br><br>
+      Cantata • Unit Testing • Integration Testing • White-Box Testing • MC/DC Coverage • Statement Coverage • Branch Coverage • ISO 26262 • Requirement Traceability • Static Analysis
+    </div>
+
+    <div class="card">
+      <strong>Development & Debugging</strong><br><br>
+      Embedded C • MISRA C • Trace32 • Debugging • Root Cause Analysis • Test Automation
+    </div>
+
+    <div class="card">
+      <strong>Configuration & Project Management</strong><br><br>
+      Git • GitLab • JIRA • SystemWeaver • CI/CD Pipelines • Agile Methodology
+    </div>
+
+    <div class="card">
+      <strong>Software Testing</strong><br><br>
+      ISTQB CTFL • Test Planning • Test Design Techniques • Test Execution • Defect Management • Regression Testing • Requirement-Based Testing
+    </div>
+
+  </div>
+</section>
+  
+<section>
+  <div class="container">
     <h2>Professional Experience</h2>
 
     <div class="card">
@@ -323,7 +365,7 @@ particlesJS("particles",{
     line_linked:{
       enable:true,
       distance:150,
-      color:"#00BFA6",
+      color:"#7C3AED",
       opacity:0.4
     }
   }
