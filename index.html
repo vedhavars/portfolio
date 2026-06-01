@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vedhavarshini J | Automotive Software Verification Engineer | ISTQB CTFL</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --primary:#7C3AED;
@@ -16,361 +14,108 @@
   --text:#1E293B;
   --border:#E9D5FF;
 }
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  overflow-x:hidden;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;}
 #particles{
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  z-index:-1;
-  background:linear-gradient(
-    135deg,
-    #F8FAFC,
-    #F3E8FF,
-    #ECFDF5
-  );
+ position:fixed;width:100%;height:100%;top:0;left:0;z-index:-1;
+ background:linear-gradient(135deg,#F8FAFC,#F3E8FF,#ECFDF5);
 }
-
 header{
-  text-align:center;
-  padding:100px 20px;
-  background:linear-gradient(
-    135deg,
-    #7C3AED 0%,
-    #8B5CF6 50%,
-    #14B8A6 100%
-  );
-  color:white;
+ text-align:center;padding:100px 20px;
+ background:linear-gradient(135deg,#7C3AED 0%,#8B5CF6 50%,#14B8A6 100%);
+ color:white;
 }
-
-header h1{
-  font-size:3em;
-  color:white;
-}
-  
-header p{
-  color:rgba(255,255,255,0.95);
-  font-weight:400;
-}
-
-section{
-  padding:80px 20px;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-
+header h1{font-size:3em;color:white;}
+header p{margin-top:10px;color:rgba(255,255,255,.95);}
+section{padding:80px 20px;}
+.container{max-width:1100px;margin:auto;}
 h2{
-  text-align:center;
-  margin-bottom:50px;
-  color:var(--primary);
+ text-align:center;margin-bottom:50px;color:var(--primary);
+ position:relative;font-size:2rem;
 }
-
+h2::after{
+ content:'';width:70px;height:4px;
+ background:linear-gradient(90deg,#7C3AED,#14B8A6);
+ display:block;margin:10px auto 0;border-radius:10px;
+}
 .card{
-  background:var(--card);
-  padding:30px;
-  border-radius:15px;
-  border:1px solid var(--border);
-  box-shadow:0 10px 25px rgba(124,58,237,0.12);
-  margin-bottom:30px;
-  transition:0.3s;
+ background:var(--card);padding:30px;border-radius:20px;
+ border:1px solid var(--border);
+ box-shadow:0 10px 25px rgba(124,58,237,.12);
+ margin-bottom:30px;transition:all .3s ease;
+ animation:fadeUp .8s ease;
 }
-
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px rgba(124,58,237,0.22);
+ transform:translateY(-6px);
+ box-shadow:0 15px 35px rgba(124,58,237,.22);
 }
-
-.gauge-container{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:40px;
+@keyframes fadeUp{
+ from{opacity:0;transform:translateY(20px);}
+ to{opacity:1;transform:translateY(0);}
 }
-
-.gauge{
-  width:150px;
-  height:150px;
-  position:relative;
-}
-
-.gauge svg{
-  transform:rotate(-90deg);
-}
-
-.gauge circle{
-  fill:none;
-  stroke-width:12;
-  stroke-linecap:round;
-}
-
-.gauge .bg{
-  stroke:#EDE9FE;
-}
-
+.gauge-container{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;}
+.gauge{width:150px;height:150px;position:relative;}
+.gauge svg{transform:rotate(-90deg);}
+.gauge circle{fill:none;stroke-width:12;stroke-linecap:round;}
+.gauge .bg{stroke:#EDE9FE;}
 .gauge .progress{
-  stroke:#7C3AED;
-  stroke-dasharray:440;
-  stroke-dashoffset:440;
-  animation:fillGauge 2s forwards;
+ stroke:#7C3AED;stroke-dasharray:440;stroke-dashoffset:440;
+ animation:fillGauge 2s forwards;
 }
-
-@keyframes fillGauge{
-  to{
-    stroke-dashoffset:var(--offset);
-  }
-}
-
+@keyframes fillGauge{to{stroke-dashoffset:var(--offset);}}
 .gauge-text{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
+ position:absolute;top:50%;left:50%;
+ transform:translate(-50%,-50%);text-align:center;
 }
-
-.gauge-text span{
-  font-weight:600;
-  font-size:1.1em;
-  color:var(--primary);
-}
-
+.gauge-text span{font-weight:600;font-size:1.1em;color:var(--primary);}
 .button{
-  display:inline-block;
-  padding:12px 25px;
-  border-radius:25px;
-  background:#7C3AED;
-  color:white;
-  text-decoration:none;
-  transition:0.3s;
+ display:inline-block;padding:14px 30px;border-radius:30px;
+ background:linear-gradient(135deg,#7C3AED,#14B8A6);
+ color:white;text-decoration:none;font-weight:600;
+ transition:all .3s ease;
 }
-
 .button:hover{
-  background:#14B8A6;
+ transform:translateY(-3px);
+ box-shadow:0 8px 20px rgba(124,58,237,.25);
 }
-
 footer{
-  text-align:center;
-  padding:30px;
-  background:linear-gradient(
-    135deg,
-    #7C3AED,
-    #14B8A6
-  );
-  color:white;
-  margin-top:40px;
+ text-align:center;padding:30px;
+ background:linear-gradient(135deg,#7C3AED,#14B8A6);
+ color:white;margin-top:40px;
 }
 </style>
 </head>
-
 <body>
-
 <div id="particles"></div>
-
 <header>
-  <h1>Vedhavarshini J</h1>
-  <p>🚗 Automotive Software Verification Engineer</p>
-  <p>ISTQB® CTFL Certified | ISO 26262 |MC/DC Coverage | Embedded C Testing</p>
+<h1>Vedhavarshini J</h1>
+<p>🚗 Automotive Software Verification Engineer</p>
+<p>ISTQB® CTFL Certified • ISO 26262 • MC/DC Coverage • Embedded C Testing</p>
 </header>
-
-<section>
-  <div class="container">
-    <h2>About Me</h2>
-    <div class="card">
-      Automotive Software Verification Engineer with 3+ years of experience in safety-critical embedded systems and automotive software validation.
-      Specialized in C-based unit & integration testing, white-box validation, structural coverage analysis (Statement, Branch, MC/DC), and ISO 26262 functional safety compliance.
-      ISTQB® Certified Tester – Foundation Level (CTFL) with strong knowledge of software testing principles, test design techniques, defect management, test execution, and quality assurance processes.
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Certifications</h2>
-
-    <div class="card">
-      <strong>ISTQB® Certified Tester – Foundation Level (CTFL)</strong><br>
-      International Software Testing Qualifications Board (ISTQB)
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Project Experience</h2>
-
-    <div class="card">
-      <strong>GNSS Radar Safety Measurement Engine</strong><br>
-      <em>ISO 26262 ASIL-B Automotive Project</em><br><br>
-
-      • Verified 16 interconnected embedded software components using Cantata.<br>
-      • Designed and implemented C-based unit & integration test cases.<br>
-      • Achieved 100% structural coverage (Statement, Branch, MC/DC) for 12 modules.<br>
-      • Performed white-box validation of decision logic and control flow.<br>
-      • Integrated automated test suites into CI pipeline using GitLab.<br>
-      • Maintained requirement traceability in System Weaver.
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Speedometer Skills</h2>
-
-    <div class="gauge-container">
-
-      <div class="gauge" style="--offset:44;">
-        <svg width="150" height="150">
-          <circle class="bg" cx="75" cy="75" r="70"/>
-          <circle class="progress" cx="75" cy="75" r="70"/>
-        </svg>
-        <div class="gauge-text">
-          <span>90%</span><br>C
-        </div>
-      </div>
-
-      <div class="gauge" style="--offset:88;">
-        <svg width="150" height="150">
-          <circle class="bg" cx="75" cy="75" r="70"/>
-          <circle class="progress" cx="75" cy="75" r="70"/>
-        </svg>
-        <div class="gauge-text">
-          <span>80%</span><br>ISO 26262
-        </div>
-      </div>
-
-      <div class="gauge" style="--offset:66;">
-        <svg width="150" height="150">
-          <circle class="bg" cx="75" cy="75" r="70"/>
-          <circle class="progress" cx="75" cy="75" r="70"/>
-        </svg>
-        <div class="gauge-text">
-          <span>85%</span><br>MC/DC
-        </div>
-      </div>
-
-      <div class="gauge" style="--offset:66;">
-        <svg width="150" height="150">
-          <circle class="bg" cx="75" cy="75" r="70"/>
-          <circle class="progress" cx="75" cy="75" r="70"/>
-        </svg>
-        <div class="gauge-text">
-          <span>85%</span><br>ISTQB
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Tools & Technologies</h2>
-
-    <div class="card">
-      <strong>Software Verification & Functional Safety</strong><br><br>
-      Cantata • Unit Testing • Integration Testing • White-Box Testing • MC/DC Coverage • Statement Coverage • Branch Coverage • ISO 26262 • Requirement Traceability • Static Analysis
-    </div>
-
-    <div class="card">
-      <strong>Development & Debugging</strong><br><br>
-      Embedded C • MISRA C • Trace32 • Debugging • Root Cause Analysis • Test Automation
-    </div>
-
-    <div class="card">
-      <strong>Configuration & Project Management</strong><br><br>
-      Git • GitLab • JIRA • SystemWeaver • CI/CD Pipelines • Agile Methodology
-    </div>
-
-    <div class="card">
-      <strong>Software Testing</strong><br><br>
-      ISTQB CTFL • Test Planning • Test Design Techniques • Test Execution • Defect Management • Regression Testing • Requirement-Based Testing
-    </div>
-
-  </div>
-</section>
-  
-<section>
-  <div class="container">
-    <h2>Professional Experience</h2>
-
-    <div class="card">
-      <strong>Senior Engineer – Automotive Software Verification</strong><br>
-      Tata Elxsi | Jul 2023 – Nov 2025<br><br>
-
-      • Performed C-based unit and integration testing in ISO 26262 ASIL-B environment.<br>
-      • Achieved structural coverage including MC/DC.<br>
-      • Supported CI validation workflows and regression testing.<br>
-      • Created and reviewed test cases based on software requirements and design specifications.<br>
-      • Performed defect analysis and root-cause investigation.<br>
-      • Applied ISTQB testing principles for test planning, execution, and reporting.<br>
-      • Worked with Cantata, Trace32, GitLab, JIRA.
-    </div>
-
-    <div class="card">
-      <strong>Engineer – Embedded Software & Validation</strong><br>
-      Tata Elxsi | Jul 2022 – Jul 2023<br><br>
-
-      • Supported MISRA-compliant C development and debugging.<br>
-      • Assisted in coverage analysis and test automation support.<br>
-      • Contributed to safety documentation activities.
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Contact</h2>
-    <div class="card" style="text-align:center;">
-      Email: vedhavarshini2001@gmail.com <br>
-      Phone: 8825983496 <br><br>
-
-      <a href="Vedhavarshini_Jeevanatham_Resume.docx" class="button" download>
-        Download Resume
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Vedhavarshini J | Automotive Software Verification Portfolio 🚗⚡
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-particlesJS("particles",{
-  particles:{
-    number:{value:60},
-    size:{value:3},
-    move:{speed:1},
-    line_linked:{
-      enable:true,
-      distance:150,
-      color:"#7C3AED",
-      opacity:0.4
-    }
-  }
-});
-</script>
-
-</body>
-</html>
+<section><div class="container"><h2>About Me</h2><div class="card">
+Automotive Software Verification Engineer with 3+ years of experience in safety-critical embedded systems and automotive software validation. Specialized in C-based unit & integration testing, white-box validation, structural coverage analysis (Statement, Branch, MC/DC), and ISO 26262 functional safety compliance. ISTQB® Certified Tester – Foundation Level (CTFL).
+</div></div></section>
+<section><div class="container"><h2>Certifications</h2><div class="card"><strong>ISTQB® Certified Tester – Foundation Level (CTFL)</strong><br>International Software Testing Qualifications Board (ISTQB)</div></div></section>
+<section><div class="container"><h2>Project Experience</h2><div class="card"><strong>GNSS Radar Safety Measurement Engine</strong><br><em>ISO 26262 ASIL-B Automotive Project</em><br><br>• Verified 16 interconnected embedded software components using Cantata.<br>• Designed and implemented C-based unit & integration test cases.<br>• Achieved 100% structural coverage (Statement, Branch, MC/DC).<br>• Integrated automated test suites into CI pipeline using GitLab.</div></div></section>
+<section><div class="container"><h2>Speedometer Skills</h2><div class="gauge-container">
+<div class="gauge" style="--offset:44;"><svg width="150" height="150"><circle class="bg" cx="75" cy="75" r="70"/><circle class="progress" cx="75" cy="75" r="70"/></svg><div class="gauge-text"><span>90%</span><br>C</div></div>
+<div class="gauge" style="--offset:88;"><svg width="150" height="150"><circle class="bg" cx="75" cy="75" r="70"/><circle class="progress" cx="75" cy="75" r="70"/></svg><div class="gauge-text"><span>80%</span><br>ISO 26262</div></div>
+<div class="gauge" style="--offset:66;"><svg width="150" height="150"><circle class="bg" cx="75" cy="75" r="70"/><circle class="progress" cx="75" cy="75" r="70"/></svg><div class="gauge-text"><span>85%</span><br>MC/DC</div></div>
+<div class="gauge" style="--offset:66;"><svg width="150" height="150"><circle class="bg" cx="75" cy="75" r="70"/><circle class="progress" cx="75" cy="75" r="70"/></svg><div class="gauge-text"><span>85%</span><br>ISTQB</div></div>
+</div></div></section>
+<section><div class="container"><h2>Tools & Technologies</h2>
+<div class="card"><strong>Software Verification & Functional Safety</strong><br><br>Cantata • Unit Testing • Integration Testing • White-Box Testing • MC/DC Coverage • ISO 26262</div>
+<div class="card"><strong>Development & Debugging</strong><br><br>Embedded C • MISRA C • Trace32 • Root Cause Analysis</div>
+<div class="card"><strong>Configuration & Project Management</strong><br><br>Git • GitLab • JIRA • SystemWeaver • CI/CD</div>
+<div class="card"><strong>Software Testing</strong><br><br>ISTQB CTFL • Test Planning • Defect Management • Regression Testing</div>
+</div></section>
+<section><div class="container"><h2>Professional Experience</h2>
+<div class="card"><strong>Senior Engineer – Automotive Software Verification</strong><br>Tata Elxsi | Jul 2023 – Nov 2025</div>
+<div class="card"><strong>Engineer – Embedded Software & Validation</strong><br>Tata Elxsi | Jul 2022 – Jul 2023</div>
+</div></section>
+<section><div class="container"><h2>Contact</h2><div class="card" style="text-align:center;">
+Email: vedhavarshini2001@gmail.com<br>Phone: 8825983496<br><br>
+<a href="Vedhavarshini_Jeevanatham_Resume.docx" class="button" download>Download Resume</a>
+</div></div></section>
+<footer>© 2026 Vedhavarshini J | Automotive Software Verification Portfolio 🚗⚡</footer>
+</body></html>
